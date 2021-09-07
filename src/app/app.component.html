@@ -1,10 +1,24 @@
 
 <div class="card">
+    <div class="card-header">
     <h1>Bienvenido {{usuario.nombre}} {{usuario.apellido}}</h1> <!-- property bingin-->
     <h2>Nacionalidad {{usuario.nacionalidad}}</h2>
+</div>
+<div #div_body class="card-body">
     
+    <input  type="text"  [(ngModel)]="usuario.nombre" >
+    <button  *ngIf="usuario.nombre != ''" class="btn btn-primary ml-3" (click)="imprimirUsuario()" >Imprimir Nombre del Usuario</button>
+    
+</div>
+
+{{div_body}}
     {{usuario}}
     <br>
     {{usuario | json}}
-    
 </div>
+
+<ul>
+    <li *ngFor="let rol of lista_roles">
+      El rol es:  {{rol}}
+    </li>
+</ul>
