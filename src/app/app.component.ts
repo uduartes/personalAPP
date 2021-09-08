@@ -66,4 +66,10 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   addRol(rol: string) {
     this.lista_roles.push(rol);
   }
+
+  recibirUsuario(usaurio:Usuario){
+    console.log("Agregado "+this.usuario);
+    this.lista_usuarios.push(usuario)
+  }
+
 }

@@ -1,1 +1,29 @@
-<p>listar-usuarios works!</p>
+<div class="card">
+    <div class="card-header">
+        <h3>Lista de Usuario</h3>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <th>Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Edad</th>
+                <th>Activo</th>
+                <th>Fecha de Registro</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let usuario of lista_usuarios">
+                    <td>{{usuario.nombre}}</td>
+                    <td>{{usuario.apellido_paterno}}</td>
+                    <td>{{usuario.apellido_materno}}</td>
+                    <td>{{usuario.edad}}</td>
+                    <td>{{usuario.activo}}</td>
+                    <td>{{usuario.fecha_registro | date }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+

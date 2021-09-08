@@ -1,10 +1,15 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: '[appHigthLight]'
+  selector: '[appHigthLight]',
+  host:{
+    style:'displey:none'
+  }
 })
 export class HigthLightDirective {
 
-  constructor() { }
+  constructor() { 
+    
+  }
 
 }

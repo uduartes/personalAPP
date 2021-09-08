@@ -1,1 +1,27 @@
-<p>crear-usuario works!</p>
+<div  class="card">
+    <div  class="card-header">
+        <h3><strong>Registro nuevo usuario</strong></h3>
+    </div>
+    <div  class="card-body">
+        <div class="form-group">
+            <label>Nombre:</label>
+            <input type="text" class="form-control" [(ngModel)]="nuevo_usuario.nombre" >
+        </div>
+        <div class="form-group">
+            <label>Apellido Paterno:</label>
+            <input type="text" class="form-control" [(ngModel)]="nuevo_usuario.apellido_paterno" >
+        </div>
+        <div class="form-group">
+            <label>Apellido Materno:</label>
+            <input type="text" class="form-control" [(ngModel)]="nuevo_usuario.apellido_materno" >
+        </div>
+        <div class="form-group">
+            <label>Edad:</label>
+            <input type="number" class="form-control" [(ngModel)]="nuevo_usuario.edad" >
+        </div>
+    </div>
+    <div class="card-footer">
+        <button class="btn btn-success ml-3" (click)="registrarUsuario()" >Registrar</button>
+        <button class="btn btn-primary ml-3" (click)="limpiarUsuario()" >Limpiar</button>
+    </div>
+</div>
